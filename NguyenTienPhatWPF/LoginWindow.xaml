@@ -13,7 +13,7 @@
         <Label Content="Password" HorizontalAlignment="Left" Height="45" Margin="182,199,0,0" VerticalAlignment="Top" Width="107"/>
         <TextBox x:Name="EmailAddressTextBox" HorizontalAlignment="Left" Height="32" Margin="281,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" TabIndex="0"/>
         <PasswordBox x:Name="PasswordBox" HorizontalAlignment="Left" Height="32" Margin="281,204,0,0" VerticalAlignment="Top" Width="316" TabIndex="1"/>
-        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="222,264,0,0" VerticalAlignment="Top" Height="38" Width="158" TabIndex="2" />
+        <Button x:Name="LoginButton" Content="Login" HorizontalAlignment="Left" Margin="222,264,0,0" VerticalAlignment="Top" Height="38" Width="158" TabIndex="2" Click="LoginButton_Click" />
         <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="400,264,0,0" VerticalAlignment="Top" Height="38" Width="158" TabIndex="3" Style="{StaticResource QuitButtonStyle}"/>
     </Grid>
 </Window>

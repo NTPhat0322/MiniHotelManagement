@@ -43,7 +43,7 @@
             <Setter Property="Background" Value="#ffcccc" />
             <Setter Property="Foreground" Value="#d32f2f" />
             <Setter Property="FontSize" Value="18" />
-            <Setter Property="FontWeight" Value="ExtraBold" />
+            <Setter Property="FontWeight" Value="DemiBold" />
         </Style>
     </Application.Resources>
 </Application>
