@@ -35,5 +35,20 @@ namespace BLL.Services
             }
             return null;
         }
+    
+        public void AddCustomer(Customer customer)
+        {
+            _customerRepo.Add(customer);
+        }
+
+        public void UpdateCustomer(Customer customer)
+        {
+            _customerRepo.Update(customer);
+        }
+
+        public Customer? GetCustomerById(int id)
+        {
+            return _customerRepo.GetById(id);
+        }
     }
 }

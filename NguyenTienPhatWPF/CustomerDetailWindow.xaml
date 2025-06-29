@@ -1,0 +1,31 @@
+﻿<Window x:Class="NguyenTienPhatWPF.CustomerDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NguyenTienPhatWPF"
+        mc:Ignorable="d"
+        Title="CustomerDetailWindow" Height="591" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="ID" HorizontalAlignment="Left" Height="46" Margin="150,74,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="CustomerIdTextBox" HorizontalAlignment="Left" Height="46" Margin="304,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="0"/>
+
+        <Label Content="Full Name" HorizontalAlignment="Left" Height="46" Margin="150,144,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="CustomerFullNameTextBox" HorizontalAlignment="Left" Height="46" Margin="304,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="1"/>
+
+        <Label Content="Telephone" HorizontalAlignment="Left" Height="46" Margin="150,214,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="TelephoneTextBox" HorizontalAlignment="Left" Height="44" Margin="304,214,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="2"/>
+
+        <Label Content="EmailAddress" HorizontalAlignment="Left" Height="46" Margin="150,280,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="EmailAddressTextBox" HorizontalAlignment="Left" Height="46" Margin="304,280,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="3"/>
+
+        <Label Content="Birthday" HorizontalAlignment="Left" Height="46" Margin="150,348,0,0" VerticalAlignment="Top" Width="130"/>
+        <DatePicker x:Name="BirthdayDatePicker" Margin="304,346,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="224" Height="34" TabIndex="4" />
+
+        <Label Content="Status" HorizontalAlignment="Left" Height="46" Margin="150,410,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="StatusTextBox" HorizontalAlignment="Left" Height="44" Margin="304,410,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="5"/>
+
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="203,483,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="6" Click="SaveButton_Click" />
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="430,483,0,0" VerticalAlignment="Top" Height="46" Width="197" Style="{StaticResource QuitButtonStyle}" TabIndex="7"/>
+    </Grid>
+</Window>

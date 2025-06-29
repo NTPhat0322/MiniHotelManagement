@@ -10,11 +10,11 @@
         <Label Content="Room Management" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="432" FontWeight="Bold" FontSize="22" Foreground="#1976d2" HorizontalContentAlignment="Center" Height="38"/>
         <Rectangle HorizontalAlignment="Center" Height="65" Margin="0,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="780" Fill="Bisque" RadiusX="20" RadiusY="20"/>
         <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="29" Margin="29,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" TabIndex="0"/>
-        <Button x:Name="SearchButton" Content="Search" Margin="295,85,400,320" TabIndex="1"/>
-        <Button x:Name="CreateButton" Content="Create" Margin="417,85,278,320" TabIndex="2"/>
-        <Button x:Name="UpdateButton" Content="Update" Margin="537,85,158,320" TabIndex="3"/>
-        <Button x:Name="DeleteButton" Content="Delete" Margin="658,85,37,320" TabIndex="4"/>
-        <DataGrid x:Name="RoomDataGrid" HorizontalAlignment="Center" Height="262" Margin="0,150,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False">
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="301,84,0,0" VerticalAlignment="Top" Height="31" Width="105" TabIndex="1" />
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="415,84,0,0" VerticalAlignment="Top" Height="31" Width="106" TabIndex="2" />
+        <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="534,85,0,0" VerticalAlignment="Top" Height="31" Width="106" TabIndex="3" />
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="655,85,0,0" VerticalAlignment="Top" Height="30" Width="105" TabIndex="4" />
+        <DataGrid x:Name="RoomDataGrid" HorizontalAlignment="Center" Height="242" Margin="0,150,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="30" Binding="{Binding RoomId}" />
                 <DataGridTextColumn Header="Number" Width="60" Binding="{Binding RoomNumber}" />

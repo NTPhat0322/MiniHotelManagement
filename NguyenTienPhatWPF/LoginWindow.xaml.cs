@@ -65,10 +65,19 @@ namespace NguyenTienPhatWPF
                 return;
             }
             //login customer
-            MainWindow mainWindowCustomer = new MainWindow();
-            this.Hide();
-            mainWindowCustomer.ShowDialog();
-            return;
+            //MainWindow mainWindowCustomer = new MainWindow();
+            //this.Hide();
+            //mainWindowCustomer.ShowDialog();
+            //return;
+        }
+
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult rs = MessageBox.Show("Are you sure to quit", "Quit", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (rs == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
         }
     }
 }

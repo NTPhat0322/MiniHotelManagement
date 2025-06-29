@@ -20,5 +20,46 @@ namespace NguyenTienPhatWPF
         {
             InitializeComponent();
         }
+
+        private void CustManagementButton_Click(object sender, RoutedEventArgs e)
+        {
+            CustomerManagementWindow customerManagementWindow = new();
+            this.Hide();
+            customerManagementWindow.ShowDialog();
+            this.ShowDialog();
+        }
+
+        private void RoomManagementButton_Click(object sender, RoutedEventArgs e)
+        {
+            RoomManagementWindow roomManagementWindow = new();
+            this.Hide();
+            roomManagementWindow.ShowDialog();
+            this.ShowDialog();
+        }
+
+        private void BookingManagementButton_Click(object sender, RoutedEventArgs e)
+        {
+            BookingManagement bookingManagement = new();
+            this.Hide();
+            bookingManagement.ShowDialog();
+            this.ShowDialog();
+        }
+
+        private void ReportButton_Click(object sender, RoutedEventArgs e)
+        {
+            ReportStatisticWindow reportStatisticWindow = new();
+            this.Hide();
+            reportStatisticWindow.ShowDialog();
+            this.ShowDialog();
+        }
+
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult rs = MessageBox.Show("Are you sure to quit", "Quit", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (rs == MessageBoxResult.Yes)
+            {
+                Application.Current.Shutdown();
+            }
+        }
     }
 }
