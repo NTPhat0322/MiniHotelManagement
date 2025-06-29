@@ -30,15 +30,6 @@
             <Setter Property="VerticalContentAlignment" Value="Center"/>
         </Style>
 
-        <!-- Primary/ Default Button Style: Nền Vàng, Chữ Đỏ Crimson
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="#ffff00" />
-            <Setter Property="Foreground" Value="#dc143c" />
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="FontWeight" Value="DemiBold" />
-        </Style>
-         -->
-        
         <!-- Secondary/ Red Button Style: Nền Đỏ Crimson, Chữ Vàng -->
         <Style TargetType="Button">
             <Setter Property="Background" Value="#1976d2" />
