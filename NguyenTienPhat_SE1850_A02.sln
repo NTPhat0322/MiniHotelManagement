@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NguyenTienPhatWPF", "NguyenTienPhatWPF\NguyenTienPhatWPF.csproj", "{AB81B5C9-776F-4CAF-AC2C-C120DBB19054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{3FC0BF4A-07EF-47A3-B437-D65A79E1D2E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{CEFADBF7-2676-4C08-92C2-844E04B98F6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB81B5C9-776F-4CAF-AC2C-C120DBB19054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB81B5C9-776F-4CAF-AC2C-C120DBB19054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB81B5C9-776F-4CAF-AC2C-C120DBB19054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB81B5C9-776F-4CAF-AC2C-C120DBB19054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FC0BF4A-07EF-47A3-B437-D65A79E1D2E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FC0BF4A-07EF-47A3-B437-D65A79E1D2E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FC0BF4A-07EF-47A3-B437-D65A79E1D2E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FC0BF4A-07EF-47A3-B437-D65A79E1D2E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFADBF7-2676-4C08-92C2-844E04B98F6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFADBF7-2676-4C08-92C2-844E04B98F6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFADBF7-2676-4C08-92C2-844E04B98F6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFADBF7-2676-4C08-92C2-844E04B98F6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA39F238-CE89-4BFE-9CB2-368337231FE4}
+	EndGlobalSection
+EndGlobal
