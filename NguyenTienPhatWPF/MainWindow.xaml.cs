@@ -58,7 +58,7 @@ namespace NguyenTienPhatWPF
             MessageBoxResult rs = MessageBox.Show("Are you sure to quit", "Quit", MessageBoxButton.YesNo, MessageBoxImage.Warning);
             if (rs == MessageBoxResult.Yes)
             {
-                Application.Current.Shutdown();
+                this.Close();
             }
         }
     }

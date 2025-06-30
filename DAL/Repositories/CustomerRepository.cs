@@ -37,18 +37,6 @@ namespace DAL.Repositories
         public void Update(Customer customer)
         {
             _context = new();
-            //Customer? existingCust = _context.Customers.FirstOrDefault(c => c.CustomerId == customer.CustomerId);
-            //if(existingCust == null)
-            //{
-            //    return;
-            //}
-            //existingCust.CustomerFullName = customer.CustomerFullName;
-            //existingCust.Telephone = customer.Telephone;
-            //existingCust.EmailAddress = customer.EmailAddress;
-            //existingCust.CustomerBirthday = customer.CustomerBirthday;
-            //existingCust.CustomerStatus = customer.CustomerStatus;
-            //existingCust.Password = customer.Password; // Assuming you want to update the password as well
-            //existingCust.CustomerStatus = customer.CustomerStatus;
             _context.Customers.Update(customer);
             _context.SaveChanges();
         }

@@ -60,5 +60,39 @@ namespace NguyenTienPhatWPF
                 this.Close();
             }
         }
+
+        private void CreateButton_Click(object sender, RoutedEventArgs e)
+        {
+            CustomerDetailWindow customerDetailWindow = new CustomerDetailWindow();
+            customerDetailWindow.SelectedCustomer = null; // No customer selected, so create a new one
+            customerDetailWindow.CustomerIdTextBox.IsEnabled = false;
+            //customerDetailWindow.StatusTextBox.IsEnabled = false; // Disable editing of Status
+            customerDetailWindow.ShowDialog();
+            FillDataGrid();
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Customer? selectedCustomer = CustomerDataGrid.SelectedItem as Customer;
+            if (selectedCustomer == null)
+            {
+                MessageBox.Show("Please select a customer to delete.", "Empty", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            MessageBoxResult rs = MessageBox.Show($"Are you sure you want to delete customer {selectedCustomer.CustomerFullName}?", "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (rs == MessageBoxResult.Yes)
+            {
+                var existingCust = _customerService.GetCustomerById(selectedCustomer.CustomerId);
+                _customerService.DeleteCustomer(existingCust!);
+            }
+            FillDataGrid();
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            //search by name
+            string searchText = SearchTextBox.Text.Trim();
+            CustomerDataGrid.ItemsSource = _customerService.SearchByName(searchText);
+        }
     }
 }

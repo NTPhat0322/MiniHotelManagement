@@ -50,5 +50,20 @@ namespace BLL.Services
         {
             return _customerRepo.GetById(id);
         }
+
+        public void DeleteCustomer(Customer customer)
+        {
+            customer.CustomerStatus = 0; // Set status to 0 (inactive) instead of deleting
+            _customerRepo.Update(customer); // Update the status in the database
+        }
+
+        public List<Customer> SearchByName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return GetAll(); // Return all customers if name is empty
+            }
+            return GetAll().Where(c => c.CustomerFullName != null && c.CustomerFullName.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }

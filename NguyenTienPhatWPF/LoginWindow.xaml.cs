@@ -55,6 +55,9 @@ namespace NguyenTienPhatWPF
                 MainWindow mainWindow = new MainWindow();
                 this.Hide();
                 mainWindow.ShowDialog();
+                this.Show();
+                //this.EmailAddressTextBox = null;
+                this.PasswordBox.Clear();
                 return;
             }
 

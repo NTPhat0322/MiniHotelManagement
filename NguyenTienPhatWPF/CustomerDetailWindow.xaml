@@ -7,25 +7,28 @@
         mc:Ignorable="d"
         Title="CustomerDetailWindow" Height="591" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
-        <Label Content="ID" HorizontalAlignment="Left" Height="46" Margin="150,74,0,0" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="CustomerIdTextBox" HorizontalAlignment="Left" Height="46" Margin="304,74,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="0"/>
+        <Label Content="ID" HorizontalAlignment="Left" Height="46" Margin="148,30,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="CustomerIdTextBox" HorizontalAlignment="Left" Height="46" Margin="302,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="0"/>
 
-        <Label Content="Full Name" HorizontalAlignment="Left" Height="46" Margin="150,144,0,0" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="CustomerFullNameTextBox" HorizontalAlignment="Left" Height="46" Margin="304,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="1"/>
+        <Label Content="Full Name" HorizontalAlignment="Left" Height="46" Margin="148,100,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="CustomerFullNameTextBox" HorizontalAlignment="Left" Height="46" Margin="302,100,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="1"/>
 
-        <Label Content="Telephone" HorizontalAlignment="Left" Height="46" Margin="150,214,0,0" VerticalAlignment="Top" Width="106"/>
-        <TextBox x:Name="TelephoneTextBox" HorizontalAlignment="Left" Height="44" Margin="304,214,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="2"/>
+        <Label Content="Telephone" HorizontalAlignment="Left" Height="46" Margin="148,170,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="TelephoneTextBox" HorizontalAlignment="Left" Height="44" Margin="302,170,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="2"/>
 
-        <Label Content="EmailAddress" HorizontalAlignment="Left" Height="46" Margin="150,280,0,0" VerticalAlignment="Top" Width="130"/>
-        <TextBox x:Name="EmailAddressTextBox" HorizontalAlignment="Left" Height="46" Margin="304,280,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="3"/>
+        <Label Content="EmailAddress" HorizontalAlignment="Left" Height="46" Margin="148,236,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="EmailAddressTextBox" HorizontalAlignment="Left" Height="46" Margin="302,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="3"/>
 
-        <Label Content="Birthday" HorizontalAlignment="Left" Height="46" Margin="150,348,0,0" VerticalAlignment="Top" Width="130"/>
-        <DatePicker x:Name="BirthdayDatePicker" Margin="304,346,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="224" Height="34" TabIndex="4" />
+        <Label Content="Birthday" HorizontalAlignment="Left" Height="46" Margin="148,304,0,0" VerticalAlignment="Top" Width="130"/>
+        <DatePicker x:Name="BirthdayDatePicker" Margin="302,302,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="224" Height="34" TabIndex="4" />
 
-        <Label Content="Status" HorizontalAlignment="Left" Height="46" Margin="150,410,0,0" VerticalAlignment="Top" Width="130"/>
-        <TextBox x:Name="StatusTextBox" HorizontalAlignment="Left" Height="44" Margin="304,410,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="5"/>
+        <Label Content="Status" HorizontalAlignment="Left" Height="46" Margin="148,366,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="StatusTextBox" HorizontalAlignment="Left" Height="44" Margin="302,366,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="5"/>
 
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="203,483,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="6" Click="SaveButton_Click" />
-        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="430,483,0,0" VerticalAlignment="Top" Height="46" Width="197" Style="{StaticResource QuitButtonStyle}" TabIndex="7"/>
+        <Label Content="Password" HorizontalAlignment="Left" Height="46" Margin="148,426,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Left" Height="44" Margin="302,424,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="6"/>
+
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="203,483,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="7" Click="SaveButton_Click" />
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="430,483,0,0" VerticalAlignment="Top" Height="46" Width="197" Style="{StaticResource QuitButtonStyle}" TabIndex="7" Click="CloseButton_Click"/>
     </Grid>
 </Window>

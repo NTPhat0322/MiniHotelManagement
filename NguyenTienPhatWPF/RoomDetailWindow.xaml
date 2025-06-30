@@ -1,0 +1,34 @@
+﻿<Window x:Class="NguyenTienPhatWPF.RoomDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NguyenTienPhatWPF"
+        mc:Ignorable="d"
+        Title="RoomDetailWindow" Height="640" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="ID" HorizontalAlignment="Left" Height="46" Margin="148,30,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="RoomIdTextBox" HorizontalAlignment="Left" Height="46" Margin="302,30,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="0"/>
+
+        <Label Content="Number" HorizontalAlignment="Left" Height="46" Margin="148,100,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="RoomNumberTextBox" HorizontalAlignment="Left" Height="46" Margin="302,100,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="1"/>
+
+        <Label Content="Description" HorizontalAlignment="Left" Height="46" Margin="148,170,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox x:Name="RoomDetailDescriptionTextBox" HorizontalAlignment="Left" Height="44" Margin="302,170,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="2"/>
+
+        <Label Content="Max Capacity" HorizontalAlignment="Left" Height="46" Margin="148,236,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="RoomMaxCapacityTextBox" HorizontalAlignment="Left" Height="46" Margin="302,236,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="3"/>
+
+        <Label Content="Status" HorizontalAlignment="Left" Height="46" Margin="148,312,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="RoomStatusTextBox" HorizontalAlignment="Left" Height="44" Margin="302,312,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="4"/>
+
+        <Label Content="Price per day" HorizontalAlignment="Left" Height="46" Margin="146,373,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="RoomPricePerDayTextBox" HorizontalAlignment="Left" Height="44" Margin="302,372,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="354" TabIndex="5"/>
+
+        <Label Content="Room Type" HorizontalAlignment="Left" Height="46" Margin="148,440,0,0" VerticalAlignment="Top" Width="130"/>
+        <ComboBox x:Name="RoomTypeIdComboBox" HorizontalAlignment="Left" Height="44" Margin="302,438,0,0" VerticalAlignment="Top" Width="354" TabIndex="6"/>
+
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="201,547,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="7" Click="SaveButton_Click" />
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="430,547,0,0" VerticalAlignment="Top" Height="46" Width="197" Style="{StaticResource QuitButtonStyle}" TabIndex="8" Click="CloseButton_Click"/>
+    </Grid>
+</Window>
