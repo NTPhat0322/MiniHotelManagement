@@ -5,28 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NguyenTienPhatWPF"
         mc:Ignorable="d"
-        Title="BookingManagement" Height="450" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="BookingManagement" Height="450" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Booking Management" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="432" FontWeight="Bold" FontSize="22" Foreground="#1976d2" HorizontalContentAlignment="Center" Height="38"/>
         <Rectangle HorizontalAlignment="Center" Height="65" Margin="0,65,0,0" Stroke="Black" VerticalAlignment="Top" Width="780" Fill="Bisque" RadiusX="20" RadiusY="20"/>
         <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Height="29" Margin="29,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" TabIndex="0"/>
-        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="301,84,0,0" VerticalAlignment="Top" Height="31" Width="105" TabIndex="1" />
-        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="415,84,0,0" VerticalAlignment="Top" Height="31" Width="106" TabIndex="2" />
-        <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="534,85,0,0" VerticalAlignment="Top" Height="31" Width="106" TabIndex="3" />
-        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="655,85,0,0" VerticalAlignment="Top" Height="30" Width="105" TabIndex="4" />
-        <DataGrid x:Name="BookingDataGrid" HorizontalAlignment="Center" Height="240" Margin="0,150,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False">
+        <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="301,84,0,0" VerticalAlignment="Top" Height="31" Width="105" TabIndex="1" Click="SearchButton_Click" />
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="415,84,0,0" VerticalAlignment="Top" Height="31" Width="106" TabIndex="2" Click="CreateButton_Click" />
+        <Button x:Name="UpdateButton" Content="Update" HorizontalAlignment="Left" Margin="534,85,0,0" VerticalAlignment="Top" Height="31" Width="106" TabIndex="3" Click="UpdateButton_Click" />
+        <Button x:Name="DeleteButton" Content="Delete" HorizontalAlignment="Left" Margin="655,85,0,0" VerticalAlignment="Top" Height="30" Width="105" TabIndex="4" Click="DeleteButton_Click" />
+        <DataGrid x:Name="BookingDataGrid" HorizontalAlignment="Center" Height="240" Margin="0,150,0,0" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Width="30" Binding="{Binding BookingReservationId}" />
                 <DataGridTextColumn Header="Date" Width="100" Binding="{Binding BookingDate}" />
                 <DataGridTextColumn Header="Total Price" Width="90" Binding="{Binding TotalPrice}" />
                 <DataGridTextColumn Header="Customer ID" Width="120" Binding="{Binding CustomerId}" />
                 <DataGridTextColumn Header="Status" Width="60" Binding="{Binding BookingStatus}" />
+                <DataGridTextColumn Header="Room ID" Width="60" Binding="{Binding RoomId}" />
                 <DataGridTextColumn Header="Room Number" Width="90" Binding="{Binding RoomNumber}" />
                 <DataGridTextColumn Header="Start Date" Width="100" Binding="{Binding StartDate}" />
                 <DataGridTextColumn Header="End Date" Width="100" Binding="{Binding EndDate}" />
                 <DataGridTextColumn Header="Actual Price" Width="80" Binding="{Binding ActualPrice}" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="698,17,0,0" VerticalAlignment="Top" Height="31" Width="77" Style="{StaticResource QuitButtonStyle}" TabIndex="5"/>
+        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="698,17,0,0" VerticalAlignment="Top" Height="31" Width="77" Style="{StaticResource QuitButtonStyle}" TabIndex="5" Click="QuitButton_Click"/>
     </Grid>
 </Window>

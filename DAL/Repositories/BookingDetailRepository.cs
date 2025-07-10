@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repositories
 {
@@ -13,7 +14,10 @@ namespace DAL.Repositories
         public List<BookingDetail> GetAll()
         {
             _context = new();
-            return _context.BookingDetails.ToList();
+            return _context.BookingDetails
+                .Include(bd => bd.BookingReservation)
+                .Include(bd => bd.Room)
+                .ToList();
         }
 
         public BookingDetail? GetByRoomId(int id)
@@ -41,6 +45,12 @@ namespace DAL.Repositories
             _context = new();
             _context.BookingDetails.Remove(BookingDetail);
             _context.SaveChanges();
+        }
+
+        public BookingDetail? GetByRoomAndReservationId(int roomId, int bookingReservationId)
+        {
+            _context = new();
+            return _context.BookingDetails.FirstOrDefault(bd => bd.RoomId == roomId && bd.BookingReservationId == bookingReservationId);
         }
     }
 }
