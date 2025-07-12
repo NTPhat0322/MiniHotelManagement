@@ -67,11 +67,18 @@ namespace NguyenTienPhatWPF
                 MessageBox.Show("Invalid email or password", "Invalid data", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
+            if(customer.CustomerStatus == 0)
+            {
+                MessageBox.Show("Your account is banned. Please contact the administrator.", "Account Locked", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
             //login customer
-            //MainWindow mainWindowCustomer = new MainWindow();
-            //this.Hide();
-            //mainWindowCustomer.ShowDialog();
-            //return;
+            CustomerWindow customerWindow = new CustomerWindow();
+            customerWindow.Customer = customer;
+            this.Hide();
+            customerWindow.ShowDialog();
+            this.Show();
+            return;
         }
 
         private void QuitButton_Click(object sender, RoutedEventArgs e)

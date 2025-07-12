@@ -19,8 +19,6 @@ namespace BLL.Services
         {
             return _bookingReservationRepo.GetAll();
         }
-
-
         public void AddBookingReservation(BookingReservation bookingReservation)
         {
             _bookingReservationRepo.Add(bookingReservation);
@@ -58,6 +56,12 @@ namespace BLL.Services
                 bookingInformationList.Add(bookingInformation);
             }
             return bookingInformationList;
+        }
+        public List<BookingReservation> GetBookingReservationByCustomerId(int customerId)
+        {
+            return _bookingReservationRepo.GetAll()
+                .Where(b => b.CustomerId == customerId)
+                .ToList();
         }
     }
 }

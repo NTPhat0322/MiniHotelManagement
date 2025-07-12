@@ -1,0 +1,35 @@
+﻿<Window x:Class="NguyenTienPhatWPF.BookingDetailUpdateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NguyenTienPhatWPF"
+        mc:Ignorable="d"
+        Title="BookingDetailUpdateWindow" Height="504" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Customer:" HorizontalAlignment="Left" Height="46" Margin="30,47,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CustomerComboBox" HorizontalAlignment="Left" Height="29" Margin="416,53,0,0" VerticalAlignment="Top" Width="343"/>
+
+        <Label Content="Room:" HorizontalAlignment="Left" Height="46" Margin="30,92,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="RoomComboBox" HorizontalAlignment="Left" Height="29" Margin="418,100,0,0" VerticalAlignment="Top" Width="341" TabIndex="1" SelectionChanged="RoomComboBox_SelectionChanged"/>
+
+        <Label Content="Price Per Day" HorizontalAlignment="Left" Height="46" Margin="30,129,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="PriceTextBox" HorizontalAlignment="Left" Height="37" Margin="420,134,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="342" IsReadOnly="True"/>
+
+        <Label Content="Start Date" HorizontalAlignment="Left" Height="46" Margin="30,170,0,0" VerticalAlignment="Top" Width="130"/>
+        <DatePicker x:Name="StartDatePicker" Margin="420,176,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="224" Height="34" TabIndex="0" />
+
+        <Label Content="End Date" HorizontalAlignment="Left" Height="46" Margin="30,0,0,0" VerticalAlignment="Center" Width="130"/>
+        <DatePicker x:Name="EndDatePicker" Margin="420,225,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="224" Height="34" TabIndex="1" />
+
+        <Label Content="Total Price" HorizontalAlignment="Left" Height="46" Margin="30,267,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="TotalPriceTextBox" HorizontalAlignment="Left" Height="37" Margin="422,273,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="342" IsReadOnly="True"/>
+
+        <Label Content="Status" HorizontalAlignment="Left" Height="46" Margin="30,318,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="StatusTextBox" HorizontalAlignment="Left" Height="37" Margin="422,318,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="342" TabIndex="2"/>
+
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="219,399,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="3" Click="SaveButton_Click"/>
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="446,399,0,0" VerticalAlignment="Top" Height="46" Width="198" Style="{StaticResource QuitButtonStyle}" TabIndex="4" Click="CloseButton_Click" />
+
+    </Grid>
+</Window>

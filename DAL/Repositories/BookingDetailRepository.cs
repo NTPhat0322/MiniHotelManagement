@@ -36,7 +36,12 @@ namespace DAL.Repositories
         public void Update(BookingDetail BookingDetail)
         {
             _context = new();
-            _context.BookingDetails.Update(BookingDetail);
+            var bookingDetail = _context.BookingDetails
+                .FirstOrDefault(bd => bd.BookingReservationId == BookingDetail.BookingReservationId && bd.RoomId == BookingDetail.RoomId);
+            bookingDetail.StartDate = BookingDetail.StartDate;
+            bookingDetail.EndDate = BookingDetail.EndDate;
+            bookingDetail.ActualPrice = BookingDetail.ActualPrice;
+            _context.BookingDetails.Update(bookingDetail);
             _context.SaveChanges();
         }
 

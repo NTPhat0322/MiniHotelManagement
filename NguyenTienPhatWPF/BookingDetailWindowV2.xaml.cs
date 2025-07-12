@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BLL.Services;
+using DAL.DTOs;
 using DAL.Entities;
 
 namespace NguyenTienPhatWPF
@@ -19,7 +20,6 @@ namespace NguyenTienPhatWPF
     public partial class BookingDetailWindowV2 : Window
     {
         private CustomerService customerService = new CustomerService();
-        private RoomTypeService roomTypeService = new RoomTypeService();
         private RoomInformationService roomInformationService = new RoomInformationService();
         private BookingReservationService bookingReservationService = new BookingReservationService();
         private BookingDetailService bookingDetailService = new BookingDetailService();
@@ -41,10 +41,10 @@ namespace NguyenTienPhatWPF
             RoomComboBox.DisplayMemberPath = "RoomNumber";
             RoomComboBox.SelectedValuePath = "RoomId";
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             FillData();
+
             var bookingReservations = bookingReservationService.GetAll();
             //lấy booking reservation có id lớn nhất
             if (bookingReservations.Count > 0)
@@ -57,6 +57,7 @@ namespace NguyenTienPhatWPF
             }
             bookingReservation.BookingDate = DateOnly.FromDateTime(DateTime.Now);
             bookingReservation.TotalPrice = 0; // Khởi tạo tổng giá
+
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -90,7 +91,7 @@ namespace NguyenTienPhatWPF
                 return;
             }
 
-            if(!AvailableRoom(roomId.Value, startDate, endDate))
+            if (!AvailableRoom(roomId.Value, startDate, endDate))
             {
                 MessageBox.Show("This room is not available for the selected dates.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -119,6 +120,11 @@ namespace NguyenTienPhatWPF
 
         private bool AvailableRoom(int roomId, DateOnly startDate, DateOnly endDate)
         {
+            var room = roomInformationService.GetRoomInformationById(roomId);
+            if(room.RoomStatus != 1)
+            {
+                return false;
+            }
             var bookingDetail = bookingDetailService.GetBookingDetailsByRoomId(roomId);
             if (bookingDetail.Count == 0) return true; //nếu không có booking detail nào thì phòng trống
             //kiểm tra xem phòng có bị trùng lịch không

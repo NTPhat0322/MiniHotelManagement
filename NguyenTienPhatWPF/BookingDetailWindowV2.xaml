@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NguyenTienPhatWPF"
         mc:Ignorable="d"
-        Title="BookingDetailWindowV2" Height="486" Width="800" Loaded="Window_Loaded" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="BookingDetailWindowV2" Height="551" Width="800" Loaded="Window_Loaded" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Label Content="Booking Room" HorizontalAlignment="Center" Height="46" VerticalAlignment="Top" FontSize="28"/>
 
@@ -27,10 +27,13 @@
         <Label Content="Total Price" HorizontalAlignment="Left" Height="46" Margin="10,279,0,0" VerticalAlignment="Top" Width="130"/>
         <TextBox x:Name="TotalPriceTextBox" HorizontalAlignment="Left" Height="37" Margin="402,285,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="342" IsReadOnly="True"/>
 
-        <Button x:Name="AddButton" Content="Add" HorizontalAlignment="Left" Margin="315,340,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="4" Click="AddButton_Click" />
+        <Label Content="Status" HorizontalAlignment="Left" Height="46" Margin="10,330,0,0" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="StatusTextBox" HorizontalAlignment="Left" Height="37" Margin="402,330,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="342"/>
 
-        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="199,413,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="5" Click="SaveButton_Click" />
-        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="426,413,0,0" VerticalAlignment="Top" Height="46" Width="198" Style="{StaticResource QuitButtonStyle}" TabIndex="6" Click="CloseButton_Click" />
+        <Button x:Name="AddButton" Content="Add" HorizontalAlignment="Left" Margin="315,408,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="4" Click="AddButton_Click" />
+
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="199,472,0,0" VerticalAlignment="Top" Height="46" Width="197" TabIndex="5" Click="SaveButton_Click" />
+        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Left" Margin="426,472,0,0" VerticalAlignment="Top" Height="46" Width="198" Style="{StaticResource QuitButtonStyle}" TabIndex="6" Click="CloseButton_Click" />
 
     </Grid>
 </Window>

@@ -24,6 +24,7 @@ namespace NguyenTienPhatWPF
     {
         private BookingReservationService _bookingReservationService = new();
         private BookingDetailService _bookingDetailService = new();
+
         public BookingManagement()
         {
             InitializeComponent();
@@ -69,13 +70,25 @@ namespace NguyenTienPhatWPF
         private void CreateButton_Click(object sender, RoutedEventArgs e)
         {
             BookingDetailWindowV2 bookingDetailWindow = new();
+            bookingDetailWindow.StatusTextBox.IsEnabled = false;
             bookingDetailWindow.ShowDialog();
             FillDataGrid();
         }
 
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
-
+            BookingInformationDTO? selectedBooking = BookingDataGrid.SelectedItem as BookingInformationDTO;
+            if(selectedBooking == null)
+            {
+                MessageBox.Show("Please select a booking to update.", "Empty", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            BookingDetailUpdateWindow UpdateWindow = new();
+            UpdateWindow.BookingInformationDTO = selectedBooking;
+            UpdateWindow.CustomerComboBox.IsEnabled = false;
+            UpdateWindow.RoomComboBox.IsEnabled = false;
+            UpdateWindow.ShowDialog();
+            FillDataGrid();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)

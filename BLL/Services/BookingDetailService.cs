@@ -58,5 +58,11 @@ namespace BLL.Services
         {
             return _BookingDetailRepo.GetByRoomAndReservationId(roomId, bookingReservationId);
         }
+    
+        public List<BookingDetail> GetInPeriod(DateOnly start, DateOnly end)
+        {
+            var bookingDetails = _BookingDetailRepo.GetAll();
+            return bookingDetails.Where(bd => start <= bd.StartDate && bd.EndDate <= end).ToList();
+        }
     }
 }

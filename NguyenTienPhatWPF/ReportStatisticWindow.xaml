@@ -12,15 +12,15 @@
         <Label Content="End Date" HorizontalAlignment="Left" Height="32" Margin="317,63,0,0" VerticalAlignment="Top" Width="93"/>
         <DatePicker x:Name="StartDatePicker" Margin="155,68,0,0" TabIndex="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="25"/>
         <DatePicker x:Name="EndDatePicker" Margin="414,68,0,0" TabIndex="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="25"/>
-        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="600,64,0,0" VerticalAlignment="Top" Height="31" Width="77" TabIndex="2"/>
-        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="698,64,0,0" VerticalAlignment="Top" Height="31" Width="75" Style="{StaticResource QuitButtonStyle}" TabIndex="3"/>
-        <DataGrid x:Name="BookingDataGrid" HorizontalAlignment="Left" Height="262" Margin="76,130,0,0" VerticalAlignment="Top" Width="664" AutoGenerateColumns="False">
+        <Button x:Name="CreateButton" Content="Create" HorizontalAlignment="Left" Margin="600,64,0,0" VerticalAlignment="Top" Height="31" Width="77" TabIndex="2" Click="CreateButton_Click"/>
+        <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="698,64,0,0" VerticalAlignment="Top" Height="31" Width="75" Style="{StaticResource QuitButtonStyle}" TabIndex="3" Click="QuitButton_Click"/>
+        <DataGrid x:Name="BookingDataGrid" HorizontalAlignment="Left" Height="262" Margin="76,130,0,0" VerticalAlignment="Top" Width="664" AutoGenerateColumns="False" CanUserAddRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Room Number" Width="100" Binding="{Binding BookingReservationId}" />
-                <DataGridTextColumn Header="Room Type" Width="200" Binding="{Binding BookingDate}" />
-                <DataGridTextColumn Header="Number Of Booking" Width="120" Binding="{Binding TotalPrice}" />
-                <DataGridTextColumn Header="Total Revenue" Width="150" Binding="{Binding CustomerId}" />
-                <DataGridTextColumn Header="Current Status" Width="100" Binding="{Binding BookingStatus}" />
+                <DataGridTextColumn Header="Room Number" Width="100" Binding="{Binding RoomNumber}" />
+                <DataGridTextColumn Header="Room Type" Width="200" Binding="{Binding RoomTypeName}" />
+                <DataGridTextColumn Header="Number Of Booking" Width="120" Binding="{Binding NumberOfBookings}" />
+                <DataGridTextColumn Header="Total Revenue" Width="150" Binding="{Binding TotalRevenue}" />
+                <DataGridTextColumn Header="Current Status" Width="100" Binding="{Binding RoomStatus}" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
