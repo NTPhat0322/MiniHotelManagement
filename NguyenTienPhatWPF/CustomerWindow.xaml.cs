@@ -79,5 +79,13 @@ namespace NguyenTienPhatWPF
                 this.Close();
             }
         }
+
+        private void EditProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            CustomerEditProfileWindow customerEditProfileWindow = new();
+            customerEditProfileWindow.Customer = Customer;
+            customerEditProfileWindow.CustomerIdTextBox.IsEnabled = false;
+            customerEditProfileWindow.ShowDialog();
+        }
     }
 }

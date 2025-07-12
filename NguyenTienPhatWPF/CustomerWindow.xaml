@@ -8,7 +8,7 @@
         Title="CustomerWindow" Height="450" Width="800" Background="#f9f9f9" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid>
         <Label x:Name="WelcomeMsgLable" Content="welcome message" HorizontalAlignment="Left" Margin="47,19,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Foreground="#1976d2" HorizontalContentAlignment="Left" Height="39"/>
-        <Button x:Name="EditProfileButton" Content="Edit Profile" HorizontalAlignment="Left" Margin="576,17,0,0" VerticalAlignment="Top" Height="33" TabIndex="0" Width="117" />
+        <Button x:Name="EditProfileButton" Content="Edit Profile" HorizontalAlignment="Left" Margin="576,17,0,0" VerticalAlignment="Top" Height="33" TabIndex="0" Width="117" Click="EditProfileButton_Click" />
         <Button x:Name="QuitButton" Content="Quit" HorizontalAlignment="Left" Margin="698,17,0,0" VerticalAlignment="Top" Height="31" Width="77" Style="{StaticResource QuitButtonStyle}" TabIndex="1" Click="QuitButton_Click" />
         <DataGrid x:Name="ReservationDataGrid" HorizontalAlignment="Center" Height="321" VerticalAlignment="Top" Width="780" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,103,0,0">
             <DataGrid.Columns>

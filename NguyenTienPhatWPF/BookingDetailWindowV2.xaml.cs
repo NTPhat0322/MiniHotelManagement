@@ -97,8 +97,14 @@ namespace NguyenTienPhatWPF
                 return;
             }
 
-            //tìm room
             var roomInformation = roomInformationService.GetRoomInformationById(roomId.Value);
+            if (roomInformation!.RoomStatus != 1)
+            {
+                MessageBox.Show("This room is locked.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            //tìm room
             bookingReservation.CustomerId = customerId.Value;
             bookingReservation.BookingStatus = 1;
             //tạo booking detail với thông tin đã chọn
@@ -121,10 +127,6 @@ namespace NguyenTienPhatWPF
         private bool AvailableRoom(int roomId, DateOnly startDate, DateOnly endDate)
         {
             var room = roomInformationService.GetRoomInformationById(roomId);
-            if(room.RoomStatus != 1)
-            {
-                return false;
-            }
             var bookingDetail = bookingDetailService.GetBookingDetailsByRoomId(roomId);
             if (bookingDetail.Count == 0) return true; //nếu không có booking detail nào thì phòng trống
             //kiểm tra xem phòng có bị trùng lịch không
